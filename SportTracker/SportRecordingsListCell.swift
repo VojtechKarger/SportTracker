@@ -2,15 +2,19 @@ import SwiftUI
 
 struct SportRecordingsListCell: View {
     let name: String
+    let place: String
     let duration: String
     let sportType: SportType
     
     var body: some View {
-        HStack {
+        HStack(alignment: .top) {
             Image(systemName: sportType.imageName)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 40, height: 40)
             
-            VStack {
-                Text(name)
+            VStack(alignment: .leading) {
+                Text("\(name) in \(place)")
                 Text(duration)
             }
         }
@@ -18,7 +22,7 @@ struct SportRecordingsListCell: View {
 }
 
 #Preview {
-    SportRecordingsListCell(name: "evening ride", duration: "1.5h", sportType: .cycling)
+    SportRecordingsListCell(name: "evening ride", place: "Praha", duration: "1.5h", sportType: .cycling)
         .previewLayout(.sizeThatFits)
 }
 

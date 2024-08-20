@@ -3,6 +3,7 @@
     <entity name="CDSportRecording" representedClassName="CDSportRecording" syncable="YES" codeGenerationType="class">
         <attribute name="duration" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="name" attributeType="String" defaultValueString="&quot;&quot;"/>
+        <attribute name="place" optional="YES" attributeType="String"/>
         <attribute name="recordingID" attributeType="String" defaultValueString="&quot;&quot;"/>
         <attribute name="sportType" attributeType="String" defaultValueString="&quot;cycling&quot;"/>
         <attribute name="timestamp" attributeType="Date" defaultDateTimeInterval="745860420" usesScalarValueType="NO"/>

@@ -14,6 +14,7 @@ struct SportRecording: Identifiable, Equatable, Codable {
     let duration: Double
     let sportType: SportType
     let name: String
+    let place: String
     
     init(
         id: String,
@@ -21,7 +22,8 @@ struct SportRecording: Identifiable, Equatable, Codable {
         timestamp: Date,
         duration: Double,
         sportType: SportType,
-        name: String
+        name: String,
+        place: String
     ) {
         self.id = id
         self.isRemote = isRemote
@@ -29,6 +31,7 @@ struct SportRecording: Identifiable, Equatable, Codable {
         self.duration = duration
         self.sportType = sportType
         self.name = name
+        self.place = place
     }
 }
 
@@ -41,7 +44,8 @@ extension SportRecording {
             timestamp: cdSportRecording.timestamp ?? Date(),
             duration: cdSportRecording.duration,
             sportType: SportType.init(rawValue: cdSportRecording.sportType ?? "") ?? .cycling,
-            name: cdSportRecording.name ?? "unknown"
+            name: cdSportRecording.name ?? "unknown",
+            place: cdSportRecording.place ?? "unknown"
         )
     }
 }
@@ -53,5 +57,6 @@ extension CDSportRecording {
         self.name = recording.name
         self.sportType = recording.sportType.rawValue
         self.duration = recording.duration
+        self.place = recording.place
     }
 }

@@ -2,11 +2,12 @@ import SwiftUI
 
 class SportRecordingsOverviewCoordinator: Coordinator {
    
-    let factory: SportRecordingsOverviewFactory = .init(coreDataManager: .init())
+    let factory: SportRecordingsOverviewFactory
     var navigationController: UINavigationController
     
-    init(navigationController: UINavigationController) {
+    init(navigationController: UINavigationController, factory: SportRecordingsOverviewFactory) {
         self.navigationController = navigationController
+        self.factory = factory
     }
     
     func start(animated: Bool) {
@@ -35,27 +36,51 @@ class SportRecordingsOverviewCoordinator: Coordinator {
     func presentAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "ok", style: .default))
+        
+        navigationController.presentedViewController?.present(alert, animated: true)
+    }
+    
+    func presentFilterAlert(completion: @escaping(Filter) -> Void) {
+        let alert = UIAlertController(title: "Filter", message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "All", style: .default, handler: { _ in completion(.all) } ))
+        alert.addAction(UIAlertAction(title: "Remote", style: .default, handler: { _ in completion(.remote) } ))
+        alert.addAction(UIAlertAction(title: "Local", style: .default, handler: { _ in completion(.local) } ))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        
+        navigationController.present(alert, animated: true)
     }
 }
 
 extension SportRecordingsOverviewCoordinator: SportRecordingAddRecordingViewModelDelegate {
     
-    func didFinishUploading(success: Bool) {
-        navigationController.topViewController?.dismiss(animated: true)
-        
-        if !success {
-            presentAlert(title: "Upload failed", message: "something went wrong try again later")
+    func sportRecordingAddRecordingViewModelDidFinishUploading(
+        _ viewModel: SportRecordingAddRecordingViewModel,
+        success: Bool
+    ) {
+        if success {
+            navigationController.topViewController?.dismiss(animated: true)
+        } else {
+            presentAlert(
+                title: "Something went wrong",
+                message: "Please check your internet connection and that all the fields are filled."
+            )
         }
     }
     
-    func didCancel() {
+    func sportRecordingAddRecordingViewModelDidCancel(_ viewModel: SportRecordingAddRecordingViewModel) {
         navigationController.topViewController?.dismiss(animated: true)
     }
 }
 
 extension SportRecordingsOverviewCoordinator: SportRecordingsListViewModelDelegate {
     
-    func didTapAddActivity() {
+    func sportRecordingsViewModelDidTapAddActivity(_ viewModel: SportRecordingsListViewModel) {
         presentSportRecordingAddRecording()
+    }
+    
+    func sportRecordingsViewModelDidTapFilter(_ viewModel: SportRecordingsListViewModel) {
+        presentFilterAlert { filter in
+            viewModel.filterRecordings(using: filter)
+        }
     }
 }

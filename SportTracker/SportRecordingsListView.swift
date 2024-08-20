@@ -9,6 +9,13 @@ struct SportRecordingsListView: View {
                 .onAppear(perform: viewModel.onAppear)
                 .navigationTitle("Overview")
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+                .toolbar(content: {
+                    ToolbarItem(placement: .automatic) {
+                        Button(action: viewModel.tapFilter) {
+                            Image(systemName: "line.3.horizontal.decrease.circle")
+                        }
+                    }
+                })
         }
     }
     
@@ -29,6 +36,7 @@ struct SportRecordingsListView: View {
             ForEach(recordings) { recording in
                 SportRecordingsListCell(
                     name: recording.name,
+                    place: recording.place,
                     duration: recording.durationFormatted,
                     sportType: recording.sportType
                 )
@@ -70,7 +78,7 @@ struct SportRecordingsListView: View {
 
 extension SportRecording {
     var durationFormatted: String {
-        return "\(duration)h"
+        return "\(String(format: "%.1f", duration)) h"
     }
 }
 

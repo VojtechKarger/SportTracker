@@ -7,6 +7,7 @@ struct SportRecordingsAddRecordingView: View {
         NavigationView {
             Form {
                 nameField
+                placeField
                 durationField
                 sportTypeField
                 isRemoteField
@@ -27,6 +28,13 @@ struct SportRecordingsAddRecordingView: View {
         VStack(alignment: .leading) {
             Text("Activity name:")
             TextField("type activity name...", text: $viewModel.name)
+        }
+    }
+    
+    @ViewBuilder var placeField: some View {
+        VStack(alignment: .leading) {
+            Text("Where did it happend?")
+            TextField("type place name...", text: $viewModel.place)
         }
     }
     

@@ -1,19 +1,23 @@
 import Combine
 import Foundation
+import SwiftUI
 
 protocol SportRecordingsListViewModelDelegate: AnyObject {
-    func didTapAddActivity()
-    
+    func sportRecordingsViewModelDidTapAddActivity(_ viewModel: SportRecordingsListViewModel)
+    func sportRecordingsViewModelDidTapFilter(_ viewModel: SportRecordingsListViewModel)
 }
 
 class SportRecordingsListViewModel: ObservableObject {
     enum State {
         case loading
         case loaded(recordings: [SportRecording])
-        case error // TODO: add loading error
+        case error
     }
     
     @Published private(set) var state: State = .loading
+    
+    private var recordings: [SportRecording] = []
+    private var filter: Filter = .all
     
     private let sportRecordingsProvider: SportRecordingsProviding
     private let sportRecordingsUpdater: SportRecordingUpdating
@@ -28,7 +32,6 @@ class SportRecordingsListViewModel: ObservableObject {
     func onAppear() {
         Task { [weak self] in
             await self?.setState(.loading)
-
             await self?.loadData()
         }
     }
@@ -36,9 +39,14 @@ class SportRecordingsListViewModel: ObservableObject {
     func refresh() async {
         await loadData()
     }
+   
+    func tapFilter() {
+        print("tap")
+        delegate?.sportRecordingsViewModelDidTapFilter(self)
+    }
     
     func tapAddRecording() {
-        delegate?.didTapAddActivity()
+        delegate?.sportRecordingsViewModelDidTapAddActivity(self)
     }
     
     func onDelete(indexSet: IndexSet) {
@@ -47,19 +55,32 @@ class SportRecordingsListViewModel: ObservableObject {
         for index in indexSet {
             sportRecordingsUpdater.delete(recordings[index])
         }
-//        Task {
-//            await loadData()
-//        }
+    }
+    
+    func filterRecordings(using filter: Filter) {
+        self.filter = filter
+        applyFilter()
+    }
+    
+    private func applyFilter() {
+        let filteredRecordings = recordings.filter { recording in
+            switch filter {
+                case .all:      return true
+                case .remote:   return recording.isRemote
+                case .local:    return recording.isRemote == false
+            }
+        }
+        
+        Task { @MainActor in setState(.loaded(recordings: filteredRecordings)) }
     }
     
     private func loadData() async {
         do {
             let data = try await self.sportRecordingsProvider.getAllRecordings()
             
-            await setState(.loaded(recordings: data))
-            
+            recordings = data
+            applyFilter()
         } catch(let error) {
-            print(error.localizedDescription)
             await setState(.error)
         }
     }
@@ -68,4 +89,3 @@ class SportRecordingsListViewModel: ObservableObject {
         self.state = newState
     }
 }
-
