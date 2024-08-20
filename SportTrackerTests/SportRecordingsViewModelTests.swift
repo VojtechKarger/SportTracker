@@ -8,7 +8,7 @@ final class SportRecordingsViewModelTests: XCTestCase {
     
     func test_whenViewModelIsLoadedDataAreFetchedCorrectly() throws {
         
-        let vm = SportRecordingsOverviewViewModel(sportRecordingsProvider: .mockData)
+        let vm = SportRecordingsListViewModel(sportRecordingsProvider: .mockData, sportRecordingsUpdater: .mock)
         
         let except = expectation(description: "updated data")
         vm.onAppear()

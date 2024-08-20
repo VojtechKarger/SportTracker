@@ -1,6 +1,6 @@
 import SwiftUI
 
-class LoginCoordinator: Coordinator {
+class AuthCoordinator: Coordinator {
     
     var navigationController: UINavigationController
     

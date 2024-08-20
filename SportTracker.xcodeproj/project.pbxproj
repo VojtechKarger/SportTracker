@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		85264C602C733E9000D755EA /* AuthManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85264C5F2C733E9000D755EA /* AuthManaging.swift */; };
+		85264C692C73887300D755EA /* SportRecordingUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85264C682C73887300D755EA /* SportRecordingUpdater.swift */; };
+		85264CA62C73E94F00D755EA /* SportRecordingUpdating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85264CA52C73E94F00D755EA /* SportRecordingUpdating.swift */; };
+		85264CA82C73ED1800D755EA /* MockSportRecordingUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85264CA72C73ED1800D755EA /* MockSportRecordingUpdater.swift */; };
 		85275ED42C6DFE0B005E4E49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85275ED32C6DFE0B005E4E49 /* AppDelegate.swift */; };
 		85275EDE2C6DFE0B005E4E49 /* SportTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 85275EDC2C6DFE0B005E4E49 /* SportTracker.xcdatamodeld */; };
 		85275EE02C6DFE0C005E4E49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85275EDF2C6DFE0C005E4E49 /* Assets.xcassets */; };
@@ -16,8 +20,8 @@
 		85275EFA2C6DFE0D005E4E49 /* SportTrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85275EF92C6DFE0D005E4E49 /* SportTrackerUITestsLaunchTests.swift */; };
 		85275F082C6E001D005E4E49 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85275F072C6E001D005E4E49 /* AppCoordinator.swift */; };
 		85275F0B2C6E00AE005E4E49 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85275F0A2C6E00AE005E4E49 /* Coordinator.swift */; };
-		85275F0E2C6E0A81005E4E49 /* SportRecordingsOverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85275F0D2C6E0A81005E4E49 /* SportRecordingsOverviewView.swift */; };
-		85275F102C6E0AAC005E4E49 /* SportRecordingsOverviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85275F0F2C6E0AAC005E4E49 /* SportRecordingsOverviewViewModel.swift */; };
+		85275F0E2C6E0A81005E4E49 /* SportRecordingsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85275F0D2C6E0A81005E4E49 /* SportRecordingsListView.swift */; };
+		85275F102C6E0AAC005E4E49 /* SportRecordingsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85275F0F2C6E0AAC005E4E49 /* SportRecordingsListViewModel.swift */; };
 		85275F132C6E1325005E4E49 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85275F122C6E1325005E4E49 /* LoginViewModel.swift */; };
 		85275F152C6E132D005E4E49 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85275F142C6E132D005E4E49 /* LoginView.swift */; };
 		85275F172C6E167E005E4E49 /* SportRecordingsProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85275F162C6E167E005E4E49 /* SportRecordingsProviding.swift */; };
@@ -27,15 +31,21 @@
 		85275F232C6E1EE1005E4E49 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85275F222C6E1EE1005E4E49 /* NetworkError.swift */; };
 		85275F252C6E1F1C005E4E49 /* MockSportRecordings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85275F242C6E1F1C005E4E49 /* MockSportRecordings.swift */; };
 		85275F272C6E2BC7005E4E49 /* SportRecordingsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85275F262C6E2BC7005E4E49 /* SportRecordingsViewModelTests.swift */; };
-		85275F292C6E42DD005E4E49 /* SportRecordingsOverviewListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85275F282C6E42DD005E4E49 /* SportRecordingsOverviewListCell.swift */; };
+		85275F292C6E42DD005E4E49 /* SportRecordingsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85275F282C6E42DD005E4E49 /* SportRecordingsListCell.swift */; };
+		855AF1F92C72604200243AFA /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855AF1F82C72604200243AFA /* SignUpViewModel.swift */; };
+		855AF1FB2C72604E00243AFA /* SignUpViewMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855AF1FA2C72604E00243AFA /* SignUpViewMode.swift */; };
+		855AF1FD2C72728700243AFA /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855AF1FC2C72728700243AFA /* AuthManager.swift */; };
 		858085252C6F2FE800B9E387 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 858085242C6F2FE800B9E387 /* GoogleService-Info.plist */; };
 		858085282C6F311A00B9E387 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 858085272C6F311A00B9E387 /* FirebaseFirestore */; };
 		8580852A2C6F317000B9E387 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 858085292C6F317000B9E387 /* FirebaseAuth */; };
 		8580852C2C6F317000B9E387 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 8580852B2C6F317000B9E387 /* FirebaseAuthCombine-Community */; };
 		8580852E2C6F4F3C00B9E387 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8580852D2C6F4F3C00B9E387 /* CoreDataManager.swift */; };
 		858085302C6F51F700B9E387 /* SportRecordingsOverviewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8580852F2C6F51F700B9E387 /* SportRecordingsOverviewCoordinator.swift */; };
-		858085332C6F536400B9E387 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858085322C6F536400B9E387 /* LoginCoordinator.swift */; };
+		858085332C6F536400B9E387 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858085322C6F536400B9E387 /* AuthCoordinator.swift */; };
 		858085362C6F900800B9E387 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858085352C6F900800B9E387 /* Size.swift */; };
+		85DD320C2C7482ED00ADEC8C /* SportRecordingsOverviewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DD320B2C7482ED00ADEC8C /* SportRecordingsOverviewFactory.swift */; };
+		85DD32102C7494E900ADEC8C /* SportRecordingsAddRecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DD320F2C7494E900ADEC8C /* SportRecordingsAddRecordingView.swift */; };
+		85DD32122C74950000ADEC8C /* SportRecordingAddRecordingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DD32112C74950000ADEC8C /* SportRecordingAddRecordingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +66,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		85264C5F2C733E9000D755EA /* AuthManaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManaging.swift; sourceTree = "<group>"; };
+		85264C682C73887300D755EA /* SportRecordingUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportRecordingUpdater.swift; sourceTree = "<group>"; };
+		85264CA52C73E94F00D755EA /* SportRecordingUpdating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportRecordingUpdating.swift; sourceTree = "<group>"; };
+		85264CA72C73ED1800D755EA /* MockSportRecordingUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSportRecordingUpdater.swift; sourceTree = "<group>"; };
 		85275ED02C6DFE0B005E4E49 /* SportTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85275ED32C6DFE0B005E4E49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85275EDD2C6DFE0B005E4E49 /* SportTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SportTracker.xcdatamodel; sourceTree = "<group>"; };
@@ -69,8 +83,8 @@
 		85275EF92C6DFE0D005E4E49 /* SportTrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportTrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		85275F072C6E001D005E4E49 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		85275F0A2C6E00AE005E4E49 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		85275F0D2C6E0A81005E4E49 /* SportRecordingsOverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportRecordingsOverviewView.swift; sourceTree = "<group>"; };
-		85275F0F2C6E0AAC005E4E49 /* SportRecordingsOverviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportRecordingsOverviewViewModel.swift; sourceTree = "<group>"; };
+		85275F0D2C6E0A81005E4E49 /* SportRecordingsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportRecordingsListView.swift; sourceTree = "<group>"; };
+		85275F0F2C6E0AAC005E4E49 /* SportRecordingsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportRecordingsListViewModel.swift; sourceTree = "<group>"; };
 		85275F122C6E1325005E4E49 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		85275F142C6E132D005E4E49 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		85275F162C6E167E005E4E49 /* SportRecordingsProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportRecordingsProviding.swift; sourceTree = "<group>"; };
@@ -80,12 +94,18 @@
 		85275F222C6E1EE1005E4E49 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		85275F242C6E1F1C005E4E49 /* MockSportRecordings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSportRecordings.swift; sourceTree = "<group>"; };
 		85275F262C6E2BC7005E4E49 /* SportRecordingsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportRecordingsViewModelTests.swift; sourceTree = "<group>"; };
-		85275F282C6E42DD005E4E49 /* SportRecordingsOverviewListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportRecordingsOverviewListCell.swift; sourceTree = "<group>"; };
+		85275F282C6E42DD005E4E49 /* SportRecordingsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportRecordingsListCell.swift; sourceTree = "<group>"; };
+		855AF1F82C72604200243AFA /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		855AF1FA2C72604E00243AFA /* SignUpViewMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewMode.swift; sourceTree = "<group>"; };
+		855AF1FC2C72728700243AFA /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		858085242C6F2FE800B9E387 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8580852D2C6F4F3C00B9E387 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		8580852F2C6F51F700B9E387 /* SportRecordingsOverviewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportRecordingsOverviewCoordinator.swift; sourceTree = "<group>"; };
-		858085322C6F536400B9E387 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		858085322C6F536400B9E387 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
 		858085352C6F900800B9E387 /* Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
+		85DD320B2C7482ED00ADEC8C /* SportRecordingsOverviewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportRecordingsOverviewFactory.swift; sourceTree = "<group>"; };
+		85DD320F2C7494E900ADEC8C /* SportRecordingsAddRecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportRecordingsAddRecordingView.swift; sourceTree = "<group>"; };
+		85DD32112C74950000ADEC8C /* SportRecordingAddRecordingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportRecordingAddRecordingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +136,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		85264C612C73403A00D755EA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				85264C5F2C733E9000D755EA /* AuthManaging.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		85264C622C73424000D755EA /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				8580852D2C6F4F3C00B9E387 /* CoreDataManager.swift */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
 		85275EC72C6DFE0B005E4E49 = {
 			isa = PBXGroup;
 			children = (
@@ -143,7 +179,7 @@
 				85275F062C6DFE47005E4E49 /* App */,
 				85275F092C6E0099005E4E49 /* Common */,
 				85275F0C2C6E0A28005E4E49 /* SportRecordingsOverview */,
-				85275F112C6E1303005E4E49 /* Login */,
+				85275F112C6E1303005E4E49 /* Authentication */,
 			);
 			path = SportTracker;
 			sourceTree = "<group>";
@@ -182,7 +218,7 @@
 		85275F092C6E0099005E4E49 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				8580852D2C6F4F3C00B9E387 /* CoreDataManager.swift */,
+				85264C622C73424000D755EA /* CoreData */,
 				858085352C6F900800B9E387 /* Size.swift */,
 				85275F0A2C6E00AE005E4E49 /* Coordinator.swift */,
 				85275F222C6E1EE1005E4E49 /* NetworkError.swift */,
@@ -201,21 +237,21 @@
 			name = SportRecordingsOverview;
 			sourceTree = "<group>";
 		};
-		85275F112C6E1303005E4E49 /* Login */ = {
+		85275F112C6E1303005E4E49 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				85264C612C73403A00D755EA /* Model */,
 				858085312C6F535A00B9E387 /* Services */,
 				858085342C6F540700B9E387 /* Views */,
 			);
-			name = Login;
+			name = Authentication;
 			sourceTree = "<group>";
 		};
 		85275F182C6E16DC005E4E49 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				85275F282C6E42DD005E4E49 /* SportRecordingsOverviewListCell.swift */,
-				85275F0D2C6E0A81005E4E49 /* SportRecordingsOverviewView.swift */,
-				85275F0F2C6E0AAC005E4E49 /* SportRecordingsOverviewViewModel.swift */,
+				85DD320E2C7494B500ADEC8C /* AddRecording */,
+				85DD320D2C7494AB00ADEC8C /* List */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -224,7 +260,9 @@
 			isa = PBXGroup;
 			children = (
 				85275F1D2C6E17A7005E4E49 /* SportRecordingsProvider.swift */,
+				85264C682C73887300D755EA /* SportRecordingUpdater.swift */,
 				8580852F2C6F51F700B9E387 /* SportRecordingsOverviewCoordinator.swift */,
+				85DD320B2C7482ED00ADEC8C /* SportRecordingsOverviewFactory.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -234,6 +272,7 @@
 			children = (
 				85275F1B2C6E174F005E4E49 /* SportRecording.swift */,
 				85275F162C6E167E005E4E49 /* SportRecordingsProviding.swift */,
+				85264CA52C73E94F00D755EA /* SportRecordingUpdating.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -242,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				85275F202C6E1B59005E4E49 /* MockSportRecordingsProvider.swift */,
+				85264CA72C73ED1800D755EA /* MockSportRecordingUpdater.swift */,
 				85275F242C6E1F1C005E4E49 /* MockSportRecordings.swift */,
 			);
 			name = Mock;
@@ -250,7 +290,8 @@
 		858085312C6F535A00B9E387 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				858085322C6F536400B9E387 /* LoginCoordinator.swift */,
+				858085322C6F536400B9E387 /* AuthCoordinator.swift */,
+				855AF1FC2C72728700243AFA /* AuthManager.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -260,8 +301,29 @@
 			children = (
 				85275F142C6E132D005E4E49 /* LoginView.swift */,
 				85275F122C6E1325005E4E49 /* LoginViewModel.swift */,
+				855AF1FA2C72604E00243AFA /* SignUpViewMode.swift */,
+				855AF1F82C72604200243AFA /* SignUpViewModel.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		85DD320D2C7494AB00ADEC8C /* List */ = {
+			isa = PBXGroup;
+			children = (
+				85275F282C6E42DD005E4E49 /* SportRecordingsListCell.swift */,
+				85275F0D2C6E0A81005E4E49 /* SportRecordingsListView.swift */,
+				85275F0F2C6E0AAC005E4E49 /* SportRecordingsListViewModel.swift */,
+			);
+			name = List;
+			sourceTree = "<group>";
+		};
+		85DD320E2C7494B500ADEC8C /* AddRecording */ = {
+			isa = PBXGroup;
+			children = (
+				85DD320F2C7494E900ADEC8C /* SportRecordingsAddRecordingView.swift */,
+				85DD32112C74950000ADEC8C /* SportRecordingAddRecordingViewModel.swift */,
+			);
+			name = AddRecording;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,24 +465,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85275F0E2C6E0A81005E4E49 /* SportRecordingsOverviewView.swift in Sources */,
-				85275F102C6E0AAC005E4E49 /* SportRecordingsOverviewViewModel.swift in Sources */,
+				85275F0E2C6E0A81005E4E49 /* SportRecordingsListView.swift in Sources */,
+				85275F102C6E0AAC005E4E49 /* SportRecordingsListViewModel.swift in Sources */,
+				855AF1F92C72604200243AFA /* SignUpViewModel.swift in Sources */,
 				85275F252C6E1F1C005E4E49 /* MockSportRecordings.swift in Sources */,
+				85264CA82C73ED1800D755EA /* MockSportRecordingUpdater.swift in Sources */,
+				85DD32102C7494E900ADEC8C /* SportRecordingsAddRecordingView.swift in Sources */,
 				85275F0B2C6E00AE005E4E49 /* Coordinator.swift in Sources */,
 				85275F082C6E001D005E4E49 /* AppCoordinator.swift in Sources */,
 				85275F1C2C6E174F005E4E49 /* SportRecording.swift in Sources */,
-				858085332C6F536400B9E387 /* LoginCoordinator.swift in Sources */,
-				85275F292C6E42DD005E4E49 /* SportRecordingsOverviewListCell.swift in Sources */,
+				858085332C6F536400B9E387 /* AuthCoordinator.swift in Sources */,
+				85DD320C2C7482ED00ADEC8C /* SportRecordingsOverviewFactory.swift in Sources */,
+				85275F292C6E42DD005E4E49 /* SportRecordingsListCell.swift in Sources */,
+				85264C602C733E9000D755EA /* AuthManaging.swift in Sources */,
 				858085302C6F51F700B9E387 /* SportRecordingsOverviewCoordinator.swift in Sources */,
 				85275EDE2C6DFE0B005E4E49 /* SportTracker.xcdatamodeld in Sources */,
 				858085362C6F900800B9E387 /* Size.swift in Sources */,
 				85275ED42C6DFE0B005E4E49 /* AppDelegate.swift in Sources */,
 				85275F212C6E1B59005E4E49 /* MockSportRecordingsProvider.swift in Sources */,
+				85264CA62C73E94F00D755EA /* SportRecordingUpdating.swift in Sources */,
 				85275F152C6E132D005E4E49 /* LoginView.swift in Sources */,
+				85264C692C73887300D755EA /* SportRecordingUpdater.swift in Sources */,
 				85275F132C6E1325005E4E49 /* LoginViewModel.swift in Sources */,
 				85275F232C6E1EE1005E4E49 /* NetworkError.swift in Sources */,
+				855AF1FB2C72604E00243AFA /* SignUpViewMode.swift in Sources */,
 				85275F1E2C6E17A7005E4E49 /* SportRecordingsProvider.swift in Sources */,
+				855AF1FD2C72728700243AFA /* AuthManager.swift in Sources */,
 				8580852E2C6F4F3C00B9E387 /* CoreDataManager.swift in Sources */,
+				85DD32122C74950000ADEC8C /* SportRecordingAddRecordingViewModel.swift in Sources */,
 				85275F172C6E167E005E4E49 /* SportRecordingsProviding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

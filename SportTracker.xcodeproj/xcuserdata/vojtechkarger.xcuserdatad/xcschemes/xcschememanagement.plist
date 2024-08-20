@@ -28,7 +28,25 @@
 		<key>SportTracker.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>85275ECF2C6DFE0B005E4E49</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>85275EE82C6DFE0D005E4E49</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>85275EF22C6DFE0D005E4E49</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
