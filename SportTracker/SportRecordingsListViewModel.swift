@@ -54,6 +54,7 @@ class SportRecordingsListViewModel: ObservableObject {
         for index in indexSet {
             sportRecordingsUpdater.delete(recordings[index])
         }
+        Task { await loadData() }
     }
     
     func filterRecordings(using filter: Filter) {
@@ -79,7 +80,7 @@ class SportRecordingsListViewModel: ObservableObject {
             
             recordings = data
             applyFilter()
-        } catch(let error) {
+        } catch {
             await setState(.error)
         }
     }

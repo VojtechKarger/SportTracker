@@ -9,8 +9,6 @@ struct SportRecordingsListCell: View {
     var body: some View {
         HStack(alignment: .top) {
             Image(systemName: sportType.imageName)
-                .resizable()
-                .scaledToFit()
                 .frame(width: 40, height: 40)
             
             VStack(alignment: .leading) {
@@ -22,7 +20,7 @@ struct SportRecordingsListCell: View {
 }
 
 #Preview {
-    SportRecordingsListCell(name: "evening ride", place: "Praha", duration: "1.5h", sportType: .cycling)
+    SportRecordingsListCell(name: "evening ride", place: "Praha", duration: "1.5h", sportType: .walking)
         .previewLayout(.sizeThatFits)
 }
 

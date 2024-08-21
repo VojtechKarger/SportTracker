@@ -33,6 +33,9 @@ struct SportRecordingsListView: View {
     
     @ViewBuilder func loaded(recordings: [SportRecording]) -> some View {
         List {
+            if (recordings.isEmpty) {
+                noContent
+            }
             ForEach(recordings) { recording in
                 SportRecordingsListCell(
                     name: recording.name,
@@ -51,6 +54,14 @@ struct SportRecordingsListView: View {
         }
     }
     
+    @ViewBuilder var noContent: some View {
+        Text("No content...")
+            .frame(maxWidth: .infinity)
+            .padding(.top, .xLarge)
+            .foregroundStyle(Color.accentColor)
+            .listRowSeparator(.hidden, edges: .all)
+    }
+    
     @ViewBuilder var addRecordingView: some View {
         Button(action: viewModel.tapAddRecording) {
             Image(systemName: "plus")
@@ -67,12 +78,13 @@ struct SportRecordingsListView: View {
     }
     
     @ViewBuilder var error: some View {
-        VStack(spacing: .small){
-            Text("⚠︎")
-                .font(.largeTitle)
-            Text("Something went wrong!")
-        }                
-        .foregroundStyle(Color.accentColor)
+            VStack(spacing: .small){
+                Text("⚠︎")
+                    .font(.largeTitle)
+                Text("Something went wrong!")
+            }
+            .padding(.top, .xLarge)
+            .foregroundStyle(Color.accentColor)
     }
 }
 

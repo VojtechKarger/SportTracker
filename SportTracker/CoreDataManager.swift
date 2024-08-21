@@ -30,6 +30,7 @@ final class CoreDataManager {
                 guard condition(item) else { return }
                 persistentContainer.viewContext.delete(item)
             }
+            saveContext()
         }
     }
     
