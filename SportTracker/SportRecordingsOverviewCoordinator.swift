@@ -5,6 +5,8 @@ class SportRecordingsOverviewCoordinator: Coordinator {
     let factory: SportRecordingsOverviewFactory
     var navigationController: UINavigationController
     
+    var refreshSportRecordingsList: () async -> Void = {}
+    
     init(navigationController: UINavigationController, factory: SportRecordingsOverviewFactory) {
         self.navigationController = navigationController
         self.factory = factory
@@ -20,6 +22,9 @@ class SportRecordingsOverviewCoordinator: Coordinator {
             sportRecordingsUpdater: factory.makeSportRecordingsUpdater()
         )
         viewModel.delegate = self
+        
+        refreshSportRecordingsList = viewModel.refresh
+        
         let vc = UIHostingController(rootView: SportRecordingsListView(viewModel: viewModel))
         
         navigationController.pushViewController(vc, animated: animated)
@@ -59,6 +64,9 @@ extension SportRecordingsOverviewCoordinator: SportRecordingAddRecordingViewMode
     ) {
         if success {
             navigationController.topViewController?.dismiss(animated: true)
+            Task {
+                await refreshSportRecordingsList()
+            }
         } else {
             presentAlert(
                 title: "Something went wrong",
@@ -76,6 +84,7 @@ extension SportRecordingsOverviewCoordinator: SportRecordingsListViewModelDelega
     
     func sportRecordingsViewModelDidTapAddActivity(_ viewModel: SportRecordingsListViewModel) {
         presentSportRecordingAddRecording()
+        
     }
     
     func sportRecordingsViewModelDidTapFilter(_ viewModel: SportRecordingsListViewModel) {

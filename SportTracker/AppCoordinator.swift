@@ -1,7 +1,6 @@
 import UIKit
 import SwiftUI
 import FirebaseCore
-import FirebaseAuth
 
 final class AppCoordinator: Coordinator {
     

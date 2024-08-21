@@ -13,8 +13,6 @@
 		85275ED42C6DFE0B005E4E49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85275ED32C6DFE0B005E4E49 /* AppDelegate.swift */; };
 		85275EDE2C6DFE0B005E4E49 /* SportTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 85275EDC2C6DFE0B005E4E49 /* SportTracker.xcdatamodeld */; };
 		85275EE02C6DFE0C005E4E49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85275EDF2C6DFE0C005E4E49 /* Assets.xcassets */; };
-		85275EE32C6DFE0C005E4E49 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 85275EE22C6DFE0C005E4E49 /* Base */; };
-		85275EEE2C6DFE0D005E4E49 /* SportTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85275EED2C6DFE0D005E4E49 /* SportTrackerTests.swift */; };
 		85275F082C6E001D005E4E49 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85275F072C6E001D005E4E49 /* AppCoordinator.swift */; };
 		85275F0B2C6E00AE005E4E49 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85275F0A2C6E00AE005E4E49 /* Coordinator.swift */; };
 		85275F0E2C6E0A81005E4E49 /* SportRecordingsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85275F0D2C6E0A81005E4E49 /* SportRecordingsListView.swift */; };
@@ -29,8 +27,6 @@
 		85275F292C6E42DD005E4E49 /* SportRecordingsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85275F282C6E42DD005E4E49 /* SportRecordingsListCell.swift */; };
 		858085252C6F2FE800B9E387 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 858085242C6F2FE800B9E387 /* GoogleService-Info.plist */; };
 		858085282C6F311A00B9E387 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 858085272C6F311A00B9E387 /* FirebaseFirestore */; };
-		8580852A2C6F317000B9E387 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 858085292C6F317000B9E387 /* FirebaseAuth */; };
-		8580852C2C6F317000B9E387 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 8580852B2C6F317000B9E387 /* FirebaseAuthCombine-Community */; };
 		8580852E2C6F4F3C00B9E387 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8580852D2C6F4F3C00B9E387 /* CoreDataManager.swift */; };
 		858085302C6F51F700B9E387 /* SportRecordingsOverviewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8580852F2C6F51F700B9E387 /* SportRecordingsOverviewCoordinator.swift */; };
 		858085362C6F900800B9E387 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858085352C6F900800B9E387 /* Size.swift */; };
@@ -59,10 +55,8 @@
 		85275ED32C6DFE0B005E4E49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85275EDD2C6DFE0B005E4E49 /* SportTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SportTracker.xcdatamodel; sourceTree = "<group>"; };
 		85275EDF2C6DFE0C005E4E49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		85275EE22C6DFE0C005E4E49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85275EE42C6DFE0C005E4E49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85275EE92C6DFE0D005E4E49 /* SportTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SportTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		85275EED2C6DFE0D005E4E49 /* SportTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportTrackerTests.swift; sourceTree = "<group>"; };
 		85275F072C6E001D005E4E49 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		85275F0A2C6E00AE005E4E49 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		85275F0D2C6E0A81005E4E49 /* SportRecordingsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportRecordingsListView.swift; sourceTree = "<group>"; };
@@ -92,8 +86,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				858085282C6F311A00B9E387 /* FirebaseFirestore in Frameworks */,
-				8580852C2C6F317000B9E387 /* FirebaseAuthCombine-Community in Frameworks */,
-				8580852A2C6F317000B9E387 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +139,6 @@
 		85275EEC2C6DFE0D005E4E49 /* SportTrackerTests */ = {
 			isa = PBXGroup;
 			children = (
-				85275EED2C6DFE0D005E4E49 /* SportTrackerTests.swift */,
 				85275F262C6E2BC7005E4E49 /* SportRecordingsViewModelTests.swift */,
 			);
 			path = SportTrackerTests;
@@ -157,7 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				85275EDF2C6DFE0C005E4E49 /* Assets.xcassets */,
-				85275EE12C6DFE0C005E4E49 /* LaunchScreen.storyboard */,
 				85275EE42C6DFE0C005E4E49 /* Info.plist */,
 				858085242C6F2FE800B9E387 /* GoogleService-Info.plist */,
 				85275EDC2C6DFE0B005E4E49 /* SportTracker.xcdatamodeld */,
@@ -267,8 +257,6 @@
 			name = SportTracker;
 			packageProductDependencies = (
 				858085272C6F311A00B9E387 /* FirebaseFirestore */,
-				858085292C6F317000B9E387 /* FirebaseAuth */,
-				8580852B2C6F317000B9E387 /* FirebaseAuthCombine-Community */,
 			);
 			productName = SportTracker;
 			productReference = 85275ED02C6DFE0B005E4E49 /* SportTracker.app */;
@@ -339,7 +327,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				85275EE02C6DFE0C005E4E49 /* Assets.xcassets in Resources */,
-				85275EE32C6DFE0C005E4E49 /* Base in Resources */,
 				858085252C6F2FE800B9E387 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,7 +376,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85275EEE2C6DFE0D005E4E49 /* SportTrackerTests.swift in Sources */,
 				85275F272C6E2BC7005E4E49 /* SportRecordingsViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,17 +389,6 @@
 			targetProxy = 85275EEA2C6DFE0D005E4E49 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		85275EE12C6DFE0C005E4E49 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				85275EE22C6DFE0C005E4E49 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		85275EFB2C6DFE0D005E4E49 /* Debug */ = {
@@ -546,7 +521,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SportTracker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -576,7 +550,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SportTracker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -683,16 +656,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 858085262C6F311A00B9E387 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
-		};
-		858085292C6F317000B9E387 /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 858085262C6F311A00B9E387 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		8580852B2C6F317000B9E387 /* FirebaseAuthCombine-Community */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 858085262C6F311A00B9E387 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = "FirebaseAuthCombine-Community";
 		};
 /* End XCSwiftPackageProductDependency section */
 

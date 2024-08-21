@@ -41,7 +41,6 @@ class SportRecordingsListViewModel: ObservableObject {
     }
    
     func tapFilter() {
-        print("tap")
         delegate?.sportRecordingsViewModelDidTapFilter(self)
     }
     
@@ -69,7 +68,7 @@ class SportRecordingsListViewModel: ObservableObject {
                 case .remote:   return recording.isRemote
                 case .local:    return recording.isRemote == false
             }
-        }
+        }.sorted { r1, r2 in r1.timestamp < r2.timestamp }
         
         Task { @MainActor in setState(.loaded(recordings: filteredRecordings)) }
     }

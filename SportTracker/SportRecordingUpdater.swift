@@ -20,6 +20,7 @@ final class SportRecordingUpdater: SportRecordingUpdating {
         } else {
             let newRecording: CDSportRecording = coreDataManager.newObject()
             newRecording.initialize(from: recording)
+            coreDataManager.save()
         }
         
     }
